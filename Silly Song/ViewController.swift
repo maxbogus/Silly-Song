@@ -18,11 +18,6 @@ class ViewController: UIViewController {
         nameField?.delegate = self
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     @IBAction func reset(_ sender: Any) {
         nameField?.text = nil
         lyricsView.text = nil
@@ -39,9 +34,9 @@ class ViewController: UIViewController {
     }
     
     let bananaFanaTemplate = [
-        "<FULL_NAME>, <FULL_NAME>, Bo B<SHORT_NAME>",
-        "Banana Fana Fo F<SHORT_NAME>",
-        "Me My Mo M<SHORT_NAME>",
+        "<FULL_NAME>, <FULL_NAME>, Bo b<SHORT_NAME>",
+        "Banana Fana Fo f<SHORT_NAME>",
+        "Me My Mo m<SHORT_NAME>",
         "<FULL_NAME>"].joined(separator: "\n")
     
     func shortNameFromName(name: String) -> String {
